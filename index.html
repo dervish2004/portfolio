@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dervish Talari - AIML Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Styles for scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-700">
+
+    <header class="bg-gray-50/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">Dervish Talari</a>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="#about" class="hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#skills" class="hover:text-indigo-600 transition duration-300">Skills</a>
+                <a href="#projects" class="hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="#education" class="hover:text-indigo-600 transition duration-300">Education</a>
+                <a href="#contact" class="hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-slate-800 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-100">About</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-100">Skills</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+            <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-100">Education</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900">
+                    <span class="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">Dervish Talari</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-indigo-600 mt-4 h-20 md:h-16">
+                    <span id="typed-title"></span>
+                </h2>
+                <p class="mt-4 text-lg text-slate-600">
+                    An innovative AIML student specializing in building intelligent systems and full-stack solutions.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40">View My Projects</a>
+                    <a href="/path/to/your/resume.pdf" class="bg-white hover:bg-gray-100 text-slate-700 font-bold py-3 px-6 rounded-lg transition duration-300 border border-slate-300">Download Resume</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 flex flex-col items-center justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-indigo-500 shadow-2xl shadow-indigo-500/20">
+                    <img id="profile-photo" src="https://via.placeholder.com/350/ffffff/4f46e5?text=DT" alt="Dervish Talari" class="w-full h-full rounded-full object-cover">
+                    <label for="photo-upload" class="absolute bottom-2 right-2 cursor-pointer bg-white p-2 rounded-full border border-gray-300 shadow-md hover:bg-gray-100 transition-all duration-300">
+                        <i class="fas fa-camera text-indigo-600"></i>
+                    </label>
+                    <input type="file" id="photo-upload" accept="image/*" class="hidden">
+                </div>
+                </div>
+        </section>
+
+        <section id="about" class="py-24 reveal">
+            <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">About Me</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                <p class="text-lg leading-relaxed mb-6 text-center text-slate-600">
+                    I’m an aspiring AI and Machine Learning developer who’s passionate about creating intelligent systems that make a real difference. I love exploring how data, algorithms, and creativity can come together to build smart, meaningful solutions. Whether it’s experimenting with ML and deep learning models or building with OpenAI tools, I enjoy learning, innovating, and bringing ideas to life through technology.
+                </p>
+            </div>
+        </section>
+        
+        <section id="skills" class="py-24 reveal">
+            <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">My Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg reveal">
+                    <h3 class="text-2xl font-bold text-indigo-600 mb-4">Technical Skills</h3>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-slate-800 mb-3">Languages:</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">python</span>
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">c</span>
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">html/css</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-slate-800 mb-3">Frameworks & Libraries:</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">streamlit</span>
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">flask</span>
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">bootstrap</span>
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">react</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-800 mb-3">Tools & Platforms:</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">git/github</span>
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">vs code</span>
+                            <span class="bg-indigo-100 text-indigo-800 py-2 px-4 rounded-lg font-medium">figma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg reveal">
+                    <h3 class="text-2xl font-bold text-indigo-600 mb-4">Professional Abilities</h3>
+                     <div class="mb-4">
+                        <h4 class="font-semibold text-slate-800 mb-3">Soft Skills:</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-violet-100 text-violet-800 py-2 px-4 rounded-lg font-medium">Fast Thinking</span>
+                            <span class="bg-violet-100 text-violet-800 py-2 px-4 rounded-lg font-medium">Problem Solving</span>
+                            <span class="bg-violet-100 text-violet-800 py-2 px-4 rounded-lg font-medium">Communication</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-800 mb-3">Specialties:</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-violet-100 text-violet-800 py-2 px-4 rounded-lg font-medium">AI Model Optimization</span>
+                            <span class="bg-violet-100 text-violet-800 py-2 px-4 rounded-lg font-medium">Full-Stack Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section id="projects" class="py-24 reveal">
+  <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Projects</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Project 1: Blood Cell Classification -->
+    <div class="reveal bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+      <img src="https://raw.githubusercontent.com/dervish2004/images/main/blood-9271217.jpg" class="w-full h-48 object-cover">  
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-slate-900 mb-2">Blood Cell Classification</h3>
+        <p class="text-slate-600 mb-4 h-24">A deep learning project using transfer learning to classify blood cells. My role was project lead.</p>
+        <div class="mb-4">
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">python</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">kaggle</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">open ai</span>
+        </div>
+        <div class="flex space-x-4 mt-auto">
+          <a href="https://github.com/dervish2004" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-semibold">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://bloodcell-classifier.onrender.com" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-semibold">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Stampede Detection -->
+    <div class="reveal bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+      <img src="https://raw.githubusercontent.com/dervish2004/images/main/stick_figure_crowd_by_finnjr63_d9jdu1t.jpg" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-slate-900 mb-2">Stampede Detection</h3>
+        <p class="text-slate-600 mb-4 h-24">A deep learning-based system for real-time crowd safety and stampede prevention using computer vision.</p>
+        <div class="mb-4">
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">python</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">dl</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">opencv</span>
+        </div>
+        <div class="flex space-x-4 mt-auto">
+          <a href="https://github.com/dervish2004" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-semibold">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: ML Image Recognition -->
+    <div class="reveal bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+      <img src="https://raw.githubusercontent.com/dervish2004/images/main/Machine%20Learning%20Recognition%20Concept.png" 
+     alt="ML Image Recognition" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-slate-900 mb-2">ML Image Recognition</h3>
+        <p class="text-slate-600 mb-4 h-24">An ML-powered system for automating visual tasks such as object detection and classification in images across various real-world applications.</p>
+        <div class="mb-4">
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">python</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">tensorflow</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">pandas</span>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">numpy</span>
+        </div>
+        <div class="flex space-x-4 mt-auto">
+          <a href="https://github.com/dervish2004" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition duration-300 font-semibold">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+                <div class="reveal bg-gray-100/60 rounded-lg border-2 border-dashed border-gray-300 transform transition duration-500 hover:scale-105 hover:shadow-xl flex items-center justify-center min-h-[400px]">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-slate-700 mb-2">Your Next Project</h3>
+                        <p class="text-slate-500 mb-4">Showcase another one of your amazing creations here!</p>
+                         <i class="fas fa-plus-circle text-4xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education" class="py-24 reveal">
+             <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Education</h2>
+             <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-xl text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+                 <h3 class="text-2xl font-bold text-indigo-600">Siddharth Institute of Science and Technology</h3>
+                 <p class="text-slate-500 mt-1">Puttur, Andhra Pradesh, India</p>
+                 <p class="text-xl text-slate-800 mt-4 font-semibold">B.Tech in Artificial Intelligence & Machine Learning (AIML)</p>
+                 <p class="text-slate-500 mt-1">2022 – 2026</p>
+             </div>
+        </section>
+
+        <section id="contact" class="py-24 text-center reveal">
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+            <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">I'm currently open to new opportunities and collaborations. My inbox is always open, so feel free to reach out!</p>
+            <a href="mailto:talari.dervish@gmail.com" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 text-lg shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:scale-110">
+                Say Hello
+            </a>
+            <div class="flex justify-center space-x-8 mt-12 text-4xl">
+                <a href="https://github.com/dervish2004" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-transform hover:scale-125"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dervish-talari-9b910729b/" target="_blank" class="text-slate-500 hover:text-indigo-600 transition-transform hover:scale-125"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:talari.dervish@gmail.com" class="text-slate-500 hover:text-indigo-600 transition-transform hover:scale-125"><i class="fas fa-envelope"></i></a>
+                <a href="tel:9059494635" class="text-slate-500 hover:text-indigo-600 transition-transform hover:scale-125"><i class="fas fa-phone"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200">
+        <div class="container mx-auto px-6 py-4 text-center text-slate-500">
+            <p>&copy; 2025 Dervish Talari. Built with fun and <i class="fas fa-mug-hot text-indigo-500"></i>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Typed.js Initialization ---
+        var options = {
+            strings: ['AI-Powered System Optimizer', 'Machine Learning Developer'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 1500,
+            loop: true
+        };
+        var typed = new Typed('#typed-title', options);
+
+        // --- Scroll Animation Observer ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: unobserve after revealing to save resources
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // --- Profile Photo Upload Preview ---
+        // New JavaScript for handling the photo selection and preview.
+        const photoUploadInput = document.getElementById('photo-upload');
+        const profilePhoto = document.getElementById('profile-photo');
+
+        photoUploadInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Read the file and create a temporary URL
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePhoto.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
